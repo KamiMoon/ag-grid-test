@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from '../App';
 
-jest.mock('./grids/TutorialGrid', () => {
+jest.mock('../grids/TutorialGrid', () => {
   return function TutorialGrid() {
     return <div>Tutorial Grid</div>;
   };
