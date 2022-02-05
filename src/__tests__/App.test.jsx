@@ -1,14 +1,9 @@
+import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-jest.mock('../grids/TutorialGrid', () => {
-  return function TutorialGrid() {
-    return <div>Tutorial Grid</div>;
-  };
-});
-
 test('renders label', () => {
-  render(<App />);
+  render(<App />, { wrapper: MemoryRouter });
   const appText = screen.getByText('The App');
   expect(appText).toBeInTheDocument();
 });
