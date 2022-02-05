@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import TutorialGrid from './grids/TutorialGrid';
+import HighFrequencyGrid from './grids/HighFrequencyGrid';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,7 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="tutorial-grid" element={<TutorialGrid />} />
-          {/* <Route path="high-frequency-grid" element={<Invoices />} /> */}
+          <Route path="high-frequency-grid" element={<HighFrequencyGrid />} />
           <Route
             path="*"
             element={
